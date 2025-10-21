@@ -1,0 +1,61 @@
+# Environnements Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.python-version
+
+# Jupyter
+.ipynb_checkpoints
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# Datasets / modèles
+data/
+datasets/
+models/
+*.h5
+*.ckpt
+*.pt
+*.pth
+*.tfrecord
+*.npy
+
+# binaires (exemples)
+*.dll
+*.so
+*.dylib
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git LFS pointer files (optionnel)
+.gitattributes
+
+
+# Ignorer dépôts Git imbriqués et environnements virtuels
+*.git/
+Project_mnist_mirror.git/
+env/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Modèles lourds (TensorFlow / PyTorch)
+*.h5
+*.ckpt
+*.tflite
+*.onnx
