@@ -1,0 +1,119 @@
+touch .dockerignore
+```
+
+---
+
+### **Action 3 : Ouvrir le fichier**
+
+- Double-cliquez sur `.dockerignore` dans l'explorateur de fichiers VS Code
+- Le fichier vide s'ouvre dans l'éditeur
+
+---
+
+### **Action 4 : Copier le contenu**
+
+Copiez EXACTEMENT ce texte et collez-le dans votre fichier `.dockerignore` :
+```
+# Environnement virtuel Python
+env/
+venv/
+ENV/
+.venv/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Documentation
+*.md
+!README.md
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Logs
+*.log
+
+# Tests
+tests/
+test_*.py
+
+# Données temporaires
+*.tmp
+*.bak
+*.cache
+```
+
+---
+
+### **Action 5 : Comprendre ce que fait ce fichier**
+
+Voici l'explication des sections importantes :
+
+| Ligne | Signification |
+|-------|---------------|
+| `env/` | Exclut le dossier de l'environnement virtuel (inutile dans Docker) |
+| `.git/` | Exclut l'historique Git (non nécessaire dans l'image) |
+| `*.pyc` | Exclut les fichiers Python compilés |
+| `__pycache__/` | Exclut le cache Python |
+| `.vscode/` | Exclut la configuration VS Code |
+| `mlruns/` | Exclut les expérimentations MLflow (trop volumineuses) |
+| `*.md` | Exclut les fichiers Markdown |
+| `!README.md` | **Mais** garde le README.md (le `!` signifie "ne pas exclure") |
+
+---
+
+### **Action 6 : Sauvegarder le fichier**
+
+Appuyez sur **Ctrl + S** (Windows/Linux) ou **Cmd + S** (Mac)
+
+---
+
+### **Action 7 : Vérifier que le fichier existe**
+
+Dans l'explorateur de fichiers VS Code, vous devriez voir :
+```
+Project_mnist/
+├── .dockerignore          ← Nouveau fichier
+├── .git/
+├── docker/
+│   └── Dockerfile
+├── models/
+├── src/
+├── README.md
+└── requirements.txt
